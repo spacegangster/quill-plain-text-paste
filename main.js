@@ -3,7 +3,7 @@ import Delta from 'quill-delta';
 
 const Clipboard = Quill.import('modules/clipboard');
 
-class PlainTextClipboard extends Clipboard {
+export default class PlainTextClipboard extends Clipboard {
     onPaste (e) {
         if (e.defaultPrevented || !this.quill.isEnabled()) return;
         let range = this.quill.getSelection();
